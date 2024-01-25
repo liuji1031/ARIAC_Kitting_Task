@@ -1,6 +1,6 @@
-# RWA67 Group 1
+# ARIAC Competition, Kitting Task
 
-In this assignment, we created a custom tree data structure to represent each kitting task. Each node in the tree represents one of two types of actions, i.e., "change gripper", and "pick and place". The tree is built such that the parent node is the prerequisite of the child node as the parent node needs to be executed first before the child nodes are executed. 
+In this assignment (RWA67), we addressed the kitting task in the [ARIAC competition](https://www.nist.gov/el/intelligent-systems-division-73500/agile-robotics-industrial-automation-competition) by creating a custom tree data structure to represent each kitting task. Each node in the tree represents one of two types of actions, i.e., "change gripper", and "pick and place". The tree is built such that the parent node is the prerequisite of the child node as the parent node needs to be executed first before the child nodes are executed. 
 
 For managing execution, a separate queue is used, and each node is pushed onto the queue before being executed. At each iteration, the front node of the queue is executed, after which all its child nodes are enqueued. This strategy will ensure the proper sequence of actions as represented by the tree structure. 
 
