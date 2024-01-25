@@ -1,0 +1,32 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "${default}",
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "includePath": [
+                "/home/liuji/ariac_ws/install/test_competitor/include/**",
+                "/home/liuji/ariac_ws/install/custom_msgs/include/**",
+                "/home/liuji/ariac_ws/install/robot_commander_msgs/include/**",
+                "/home/liuji/ariac_ws/install/ariac_sensors/include/**",
+                "/home/liuji/ariac_ws/install/ariac_plugins/include/**",
+                "/home/liuji/ariac_ws/install/ariac_msgs/include/**",
+                "/opt/ros/galactic/include/**",
+                "/home/liuji/ariac_ws/src/ENPM663_GroupOne/rwa67/include/",
+                "/home/liuji/ariac_ws/src/ariac/ariac_plugins/include/**",
+                "/home/liuji/ariac_ws/src/ariac/ariac_sensors/include/**",
+                "/home/liuji/ariac_ws/src/ariac/test_competitor/include/**",
+                "include/**",
+                "/usr/include/**"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu11",
+            "cppStandard": "c++17",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}

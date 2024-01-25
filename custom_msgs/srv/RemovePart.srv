@@ -1,0 +1,8 @@
+uint8 agv_id # 1-4
+uint8 quadrant_id # 1-4
+uint8 part_color 
+uint8 part_type
+
+---
+bool success
+string message

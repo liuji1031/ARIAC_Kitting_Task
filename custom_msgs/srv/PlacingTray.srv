@@ -1,0 +1,27 @@
+uint8 FLOOR_ROBOT=1     # For consistency indicates type of robot working on task
+uint8 CEILING_ROBOT=0
+
+uint8 TABLE1=1          # Selects which table the robot will pick trays from
+uint8 TABLE2=0
+
+uint8 TRAY1=1
+uint8 TRAY2=2
+uint8 TRAY3=3
+uint8 TRAY4=4
+
+uint8 AGV1=1
+uint8 AGV2=2
+uint8 AGV3=3
+uint8 AGV4=4
+
+uint8 robot         # Type of robot placing tray
+string table         # Location of table tray is placed or picked up from  
+
+string location      # Plan to place tray to --table, agv
+uint8 tray_id   # Tray transported by robot    
+uint8 agv_id    # Agv tray will be placed to and picked up from
+---
+bool success
+string message
+
+

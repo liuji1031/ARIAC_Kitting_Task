@@ -1,0 +1,86 @@
+# Trial Name: qc.yaml
+# ARIAC2023
+
+# ENVIRONMENT SETUP
+
+time_limit: -1 # options: -1 (no time limit) or number of seconds
+gazebo_state_logging: true # options: true or false
+
+
+kitting_trays: # Which kitting trays will be spawn
+  tray_ids: [1, 1, 2, 2] 
+  slots: [1, 4, 2, 6]
+
+parts:
+  agvs:
+    agv1:
+      tray_id: 1
+      parts:
+        - type: 'battery'
+          color: 'orange'
+          quadrant: 1
+          rotation: 'pi/4'
+        - type: 'regulator'
+          color: 'blue'
+          quadrant: 2
+          rotation: '-pi/4'
+    agv2:
+      tray_id: 2
+      parts:
+        - type: 'battery'
+          color: 'orange'
+          quadrant: 3
+          rotation: 'pi/3'
+        - type: 'regulator'
+          color: 'blue'
+          quadrant: 4
+          rotation: '-pi/4'
+  bins: # bin params - 8 total bins each bin has nine total slots (1-9)
+    bin1:
+      - type: 'battery'
+        color: 'orange'
+        slots: [4]
+      - type: 'regulator'
+        color: 'blue'
+        slots: [9]
+    bin5:
+      - type: 'battery'
+        color: 'orange'
+        slots: [6]
+      - type: 'regulator'
+        color: 'blue'
+        slots: [7]
+
+orders:
+  - id: 'KITTING1'
+    type: 'kitting'
+    announcement:
+      time_condition: 0
+    priority: false
+    kitting_task:
+      agv_number: 1
+      tray_id: 1
+      destination: 'warehouse'
+      products:
+        - type: 'battery'
+          color: 'orange'
+          quadrant: 1
+        - type: 'regulator'
+          color: 'blue'
+          quadrant: 2
+  - id: 'KITTING2'
+    type: 'kitting'
+    announcement:
+      time_condition: 0
+    priority: false
+    kitting_task:
+      agv_number: 2
+      tray_id: 2
+      destination: 'warehouse'
+      products:
+        - type: 'battery'
+          color: 'orange'
+          quadrant: 3
+        - type: 'regulator'
+          color: 'blue'
+          quadrant: 4

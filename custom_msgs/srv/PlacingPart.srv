@@ -1,0 +1,18 @@
+uint8 FLOOR_ROBOT=1     # For consistency indicates type of robot working on task
+uint8 CEILING_ROBOT=0
+
+uint8 KITTING=0
+uint8 ASSEMBLY_FRONT=1
+uint8 ASSEMBLY_BACK=2
+
+uint8 destination # KITTING, ASSEMBLY_FRONT, ASSEMBLY_BACK,
+uint8 robot     # Type of robot doing task
+string location      # Plan to place tray to --table, agv
+uint8 part_color    
+uint8 part_type    
+uint8 quadrant_id
+uint8 tray_id 
+uint8 agv_id    # Agv where part will be placed on top of tray
+---
+bool success
+string message

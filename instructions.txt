@@ -1,0 +1,27 @@
+1. Build the custom messages package 
+
+colcon build --packages-select custom_msgs robot_commander_msgs        
+
+2. Build the rwa67 
+colcon build --packages-select rwa67        
+
+
+3.Launch the ARIAC simulation 
+ 
+    3.1 Launch the test environment
+
+    ros2 launch ariac_gazebo ariac.launch.py \
+        trial_name:=rwa67_summer2023 competitor_pkg:=rwa67 \
+        sensor_config:=sensors
+
+    3.2 Execute moveit to instantiate motion planning 
+
+    ros2 launch ariac_moveit_config ariac_robots_moveit.launch.py
+
+4. Launch the RWA67 launch file:
+ Start the competition by instructing respective robot to begin order delivery
+
+ros2 launch rwa67 rwa67.launch.py
+
+
+  
